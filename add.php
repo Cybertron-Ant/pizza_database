@@ -10,29 +10,40 @@ if (isset($_POST['submit'])) {
 
 } */
 
+
 if (isset($_POST['submit'])) {
+
+
+
+//initialize variables to an empty string
+$email = $title = $ingredients = '';
+//if there are errors, update empty positions in the array
+$errors = array('email' => '', 'title' => '', 'ingredient' => '');
+
+
+
 
 
 //check email
 if (empty($_POST['email'])) {
-  echo "Your email is required <br />";
+    $errors['email'] =  "Your email is required <br />";
 } else {
   $email = $_POST['email'];
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "Please enter a vaild email address";
+    $errors['email'] = "Please enter a vaild email address";
   }
 }
 
 
 //check title
 if (empty($_POST['title'])) {
-  echo "Your pizza title is required <br />";
+  $errors['title'] = "Your pizza title is required <br />";
 } else {
 
-  $tite = $_POST['title'];
+  $title = $_POST['title'];
   //match lowercass and uppercase letters and a space
     if (!preg_match('/^[a-zA-Z\s]+$/', $title )) {
-      echo "Title must be letters and spaces only. <br />";
+      $errors['title'] = "Title must be letters and spaces only. <br />";
     }
   }
 
@@ -40,13 +51,13 @@ if (empty($_POST['title'])) {
 
 //check ingredients
 if (empty($_POST['ingredients'])) {
-  echo "At least one ingredient is required <br />";
+    $errors['ingredients'] =  "At least one ingredient is required <br />";
 } else {
 
   $ingredients = $_POST['ingredient'];
    //match comma separated words
       if (!preg_match('/^([a-zA-Z\s])+(,\s*[a-zA-Z\s]*)*$/', $ingredients)) {
-        echo "Ingredients must be a comma separated list. <br />";
+        $errors['ingredient'] = "Ingredients must be a comma separated list. <br />";
       }
 
 }
@@ -65,15 +76,20 @@ if (empty($_POST['ingredients'])) {
 
 <section class = "container grey-text">
   <h4 class = "center">Add a Pizza</h4>
-  <form class = "white"method = "GET" action = "">
+  <form class = "white" method = "GET" action = "add.php">
     <label for = "email">Your Email</label>
-    <input type = "text" id = "email" name ="email">
+    <input type = "text" id = "email" name ="email" value = "<?php echo $email ?>" >
+    <div class = "red-text"><?php echo $errors['email']; ?></div>
 
     <label for = "title">Pizza Title</label>
-    <input type = "text" id = "title" name ="title">
+    <input type = "text" id = "title" name ="title" value = "<?php echo $title ?>" >
+        <div class = "red-text"><?php echo $errors['title']; ?></div>
+
 
     <label for = "ingredients">Ingredients</label>
-    <input type = "text" id = "ingredients" name ="ingredients">
+    <input type = "text" id = "ingredients" name ="ingredients" value = "<?php echo $ingredients ?>" >
+        <div class = "red-text"><?php echo $errors['ingredients']; ?></div>
+
 
     <div class = "center">
       <input type = "submit" name = "submit" value = "submit" class = "btn brand z-depth-0">
@@ -86,4 +102,5 @@ if (empty($_POST['ingredients'])) {
 
 <?php  include "./templates/footer.php";   ?>
 
-  </html>
+
+  </html> 
