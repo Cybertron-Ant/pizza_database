@@ -78,16 +78,16 @@ if (empty($_POST['ingredients'])) {
   <h4 class = "center">Add a Pizza</h4>
   <form class = "white" method = "GET" action = "add.php">
     <label for = "email">Your Email</label>
-    <input type = "text" id = "email" name ="email" value = "<?php echo $email ?>" >
+    <input type = "text" id = "email" name ="email" value = "<?php echo htmlspecialchars($email) ?>" >
     <div class = "red-text"><?php echo $errors['email']; ?></div>
 
     <label for = "title">Pizza Title</label>
-    <input type = "text" id = "title" name ="title" value = "<?php echo $title ?>" >
+    <input type = "text" id = "title" name ="title" value = "<?php echo htmlspecialchars($title) ?>" >
         <div class = "red-text"><?php echo $errors['title']; ?></div>
 
 
     <label for = "ingredients">Ingredients</label>
-    <input type = "text" id = "ingredients" name ="ingredients" value = "<?php echo $ingredients ?>" >
+    <input type = "text" id = "ingredients" name ="ingredients" value = "<?php echo htmlspecialchars($ingredients) ?>" >
         <div class = "red-text"><?php echo $errors['ingredients']; ?></div>
 
 
