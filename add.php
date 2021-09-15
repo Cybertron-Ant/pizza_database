@@ -37,7 +37,7 @@ if (empty($_POST['email'])) {
 
 //check title
 if (empty($_POST['title'])) {
-  $errors['title'] = "Your pizza title is required <br />";
+  $errors['title'] = "Your soup title is required <br />";
 } else {
 
   $title = $_POST['title'];
@@ -92,13 +92,13 @@ if(array_filter($errors)) {
 <?php  include "./templates/header.php";   ?>
 
 <section class = "container grey-text">
-  <h4 class = "center">Add a Pizza</h4>
+  <h4 class = "center">Add a Soup</h4>
   <form class = "white" method = "POST" action = "add.php">
     <label for = "email">Your Email</label>
     <input type = "text" id = "email" name ="email" value = "<?php echo htmlspecialchars($email) ?>" >
     <div class = "red-text"><?php echo $errors['email']; ?></div>
 
-    <label for = "title">Pizza Title</label>
+    <label for = "title">Soup Title</label>
     <input type = "text" id = "title" name ="title" value = "<?php echo htmlspecialchars($title) ?>" >
         <div class = "red-text"><?php echo $errors['title']; ?></div>
 
