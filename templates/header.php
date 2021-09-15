@@ -30,9 +30,9 @@
    <body class = "grey lighten-4">
      <nav class = " z-depth-0">
        <div class = "container">
-         <a href = "#" class = "brand-logo brand-text">Antonio's Pizza Depo</a>
+         <a href = "#" class = "brand-logo brand-text">Antonio's Soup Depo</a>
          <ul id = "nav-mobile" class = "right ">
-           <li><a href = "#" class = "btn brand z-depth-0">Add Pizza</a></li>
+           <li><a href = "#" class = "btn brand z-depth-0">Add Soup</a></li>
          </ul>
        </div>
 
