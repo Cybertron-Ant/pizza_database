@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
 //initialize variables to an empty string
 $email = $title = $ingredients = '';
 //if there are errors, update empty positions in the array
-$errors = array('email' => '', 'title' => '', 'ingredient' => '');
+$errors = array('email' => '', 'title' => '', 'ingredients' => '');
 
 
 
@@ -54,12 +54,29 @@ if (empty($_POST['ingredients'])) {
     $errors['ingredients'] =  "At least one ingredient is required <br />";
 } else {
 
-  $ingredients = $_POST['ingredient'];
+  $ingredients = $_POST['ingredients'];
    //match comma separated words
       if (!preg_match('/^([a-zA-Z\s])+(,\s*[a-zA-Z\s]*)*$/', $ingredients)) {
-        $errors['ingredient'] = "Ingredients must be a comma separated list. <br />";
+        $errors['ingredients'] = "Ingredients must be a comma separated list. <br />";
       }
 
+}
+
+
+if(array_filter($errors)) {
+  //do nothing
+} else {
+  //redirect user to home page
+  //header('Location: index php');
+
+//Or redirect user using some JavaScript
+       echo "<script>
+       //Using setTimeout to execute a function after 5 seconds.
+       setTimeout(function () {
+          //Redirect with JavaScript
+          window.location.assign('index.php');
+       }, 1000);
+       </script>";
 }
 
 
@@ -76,7 +93,7 @@ if (empty($_POST['ingredients'])) {
 
 <section class = "container grey-text">
   <h4 class = "center">Add a Pizza</h4>
-  <form class = "white" method = "GET" action = "add.php">
+  <form class = "white" method = "POST" action = "add.php">
     <label for = "email">Your Email</label>
     <input type = "text" id = "email" name ="email" value = "<?php echo htmlspecialchars($email) ?>" >
     <div class = "red-text"><?php echo $errors['email']; ?></div>
@@ -103,4 +120,4 @@ if (empty($_POST['ingredients'])) {
 <?php  include "./templates/footer.php";   ?>
 
 
-  </html> 
+  </html>
