@@ -6,9 +6,11 @@ if (isset($_POST['submit'])) {
 //convert dangerous characters into html entities
   echo htmlspecialchars($_POST['email']);
   echo htmlspecialchars($_POST['title']);
-  echo htmlspecialchars($_POST['ingredients']); 
+  echo htmlspecialchars($_POST['ingredients']);
 
 } */
+
+if (isset($_POST['submit'])) {
 
 
 //check email
@@ -26,7 +28,7 @@ if (empty($_POST['email'])) {
 if (empty($_POST['title'])) {
   echo "Your pizza title is required <br />";
 } else {
-  
+
   $tite = $_POST['title'];
   //match lowercass and uppercase letters and a space
     if (!preg_match('/^[a-zA-Z\s]+$/', $title )) {
@@ -40,7 +42,7 @@ if (empty($_POST['title'])) {
 if (empty($_POST['ingredients'])) {
   echo "At least one ingredient is required <br />";
 } else {
-  
+
   $ingredients = $_POST['ingredient'];
    //match comma separated words
       if (!preg_match('/^([a-zA-Z\s])+(,\s*[a-zA-Z\s]*)*$/', $ingredients)) {
@@ -49,6 +51,8 @@ if (empty($_POST['ingredients'])) {
 
 }
 
+
+}// end POST submit
 
 
 ?>
