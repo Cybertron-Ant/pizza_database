@@ -42,7 +42,13 @@ if(isset($_GET['id'])) {
     <h5>Ingredients</h5>
      <p><?php echo htmlspecialchars($mySoup['ingredients']); ?></p>
 
+<!-- DELETE functionality -->
 
+<form action = "details.php" method = "POST">
+  <input type = "hidden" name = "id_to_delete" value = "<?php echo $mySoup['id']  ?>"
+  <input type = "submit" name = "delete" value = "DELETE" class = "btn brand z-depth-0">
+  
+</form>
 
    <?php else: ?>
    
