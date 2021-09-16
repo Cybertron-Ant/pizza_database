@@ -1,0 +1,31 @@
+
+
+
+.brand {
+  /*override materialize css classes */
+  background: cbb09c !important;
+};
+
+/* hide-on-small-and-down  */
+.brand-text {
+  /* text color */
+  color: cbb09c !important;
+};
+
+form {
+  max-width: 460px;
+  margin: 20px auto;
+  padding 20px;
+};
+
+.soup_style {
+  width: 100px;
+  /*40 pixels at the top auto left and right, -30px at the bottom to bring content under photo up a little bit */
+  margin: 40px auto -30px;
+  display: block;
+  position: relative;
+  /*push photo up a bit by -30px */
+  top: -30px;
+
+
+};

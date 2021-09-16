@@ -5,25 +5,10 @@
       <link rel = "stylesheet" href = "./node_modules/bootstrap.min.css">
 <link rel = "stylesheet" href = "./node_modules/materialize.min.css">
 
-
+<link rel = "stylesheet" href = "./css/beautify.css">
 
 <style type = "text/css">
-  .brand {
-    /*override materialize css classes */
-    background: cbb09c  !important;
-  }
-  /* hide-on-small-and-down  */
-  .brand-text {
-    /* text color */
-    color: cbb09c !important;
-  }
-
-  form {
-    max-width: 460px;
-    margin: 20px auto;
-    padding 20px;
-  }
-</style>
+  </style>
 
 
 </head>
