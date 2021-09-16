@@ -76,8 +76,9 @@ if(isset($_GET['id'])) {
 <!-- DELETE functionality -->
 
 <form action = "details.php" method = "POST">
+  
+  <!-- has the value of the id that I want to delete -->
   <input type = "hidden" name = "id_to_delete" value = "<?php echo $mySoup['id']  ?>">
-<!-- has the value of the id that I want to delete -->
   <input type = "submit" name = "delete" value = "DELETE" class = "btn brand z-depth-0">
 
 </form>
