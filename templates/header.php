@@ -1,18 +1,16 @@
-
-
-   <head>
+ <head>
      <title>My page</title>
       <link rel = "stylesheet" href = "./node_modules/bootstrap.min.css">
 <link rel = "stylesheet" href = "./node_modules/materialize.min.css">
 
-<link rel = "stylesheet" href = "./css/beautify.css">
+<link rel = "stylesheet" href = "css/beautify.css">
 
 <style type = "text/css">
   </style>
 
 
 </head>
-   <body class = "grey lighten-4">
+   <body class = "paint lighten-8">
      <nav class = " z-depth-0">
        <div class = "container">
          <a href = "index.php" class = "brand-logo brand-text">Antonio's Soup Depo</a>

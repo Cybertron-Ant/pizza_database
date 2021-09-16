@@ -20,7 +20,7 @@ form {
 
 .soup_style {
   width: 100px;
-  /*40 pixels at the top auto left and right, -30px at the bottom to bring content under photo up a little bit */
+/*40 pixels at the top auto left and right, -30px at the bottom to bring content under photo up a little bit*/
   margin: 40px auto -30px;
   display: block;
   position: relative;
@@ -29,3 +29,16 @@ form {
 
 
 };
+
+
+
+.paint {
+/* Chrome 10-25, Safari 5.1-6 */
+
+background: -webkit-linear-gradient(315deg, #214861, #d00e50);
+
+/* W3C, Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background: linear-gradient(315deg, #214861, #d00e50);
+
+}
