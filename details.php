@@ -38,6 +38,8 @@ if(isset($_GET['id'])) {
    <?php if($mySoup): ?>
     <h4><?php echo htmlspecialchars($mySoup['title']); ?></h4>
     <p>Created by: <?php echo htmlspecialchars($mySoup['email']); ?></p>
+    <p>Created by: <?php echo date($mySoup['created_at']); ?></p>
+
 
    <?php else: ?>
    
