@@ -69,6 +69,18 @@ if (empty($_POST['ingredients'])) {
 if(array_filter($errors)) {
   //do nothing
 } else {
+  
+  //override value of email variable
+  $email = mysqli_real_escape_string($conn, $_POST['email']);
+  //override value of title variable
+  $title = mysqli_real_escape_string($conn, $_POST['title']);
+  //override value of ingredients variable
+  $ingredients = mysqli_real_escape_string($conn, $_POST['ingredients']);
+  
+$sql = "INSERT INTO soups(title,email, ingredients) VALUES('$title','$email','$ingredients')";
+
+
+  
   //redirect user to home page
   //header('Location: index php');
 
