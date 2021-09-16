@@ -67,10 +67,20 @@ mysqli_close($conn);
         </div>
       </div>
 
-    <?php endforeach; ?>
-
   </div>
+
+    <?php endforeach; ?>
+    
+    <?php if (count($dishes) > 1): ?>
+      <p>There are more many soups available</p>
+    <?php else: ?>
+      <p>There is only one or less soups remaining</p>
+    <?php endif; ?>
+  
 </div>
+
+      
+
 
 <?php  include "./templates/footer.php";   ?>
 
