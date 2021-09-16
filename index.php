@@ -53,7 +53,13 @@ mysqli_close($conn);
         <div class = "card z-depth-0">
           <div class = "card-content center">
             <h6><?php echo htmlspecialchars($dish['title']); ?></h6>
-            <div><?php echo htmlspecialchars($dish['ingredients']); ?> </div>
+            <ul>
+              <?php foreach (explode(',', $dish['ingredients']) as $myIngredient) { ?>
+                <!-- Output each ingredient in a list -->
+                <li><?php echo htmlspecialchars($myIngredient); ?></li>
+              <?php } ?>
+              
+            </ul>
           </div>
           <div class = "card-action right-align">
             <a class = "brand-text" href = "#">more info</a>
