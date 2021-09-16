@@ -32,7 +32,7 @@ if(isset($_GET['id'])) {
 
 <?php  include "templates/header.php";   ?>
 
-<h2>Soup Details</h2>
+<h2 class="center">Soup Details</h2>
 <div class = "container center">
   
    <?php if($mySoup): ?>
