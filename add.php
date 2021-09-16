@@ -79,19 +79,30 @@ if(array_filter($errors)) {
   
 $sql = "INSERT INTO soups(title,email, ingredients) VALUES('$title','$email','$ingredients')";
 
-
+//check, and save to database
+if (mysqli_query($conn, $sql)) {
+  //if successful
   
   //redirect user to home page
   //header('Location: index php');
 
 //Or redirect user using some JavaScript
-       echo "<script>
-       //Using setTimeout to execute a function after 5 seconds.
+  echo "<script>
+       //Using setTimeout to execute a function after 1 second.
        setTimeout(function () {
           //Redirect with JavaScript
           window.location.assign('index.php');
        }, 1000);
-       </script>";
+       </script>";  
+  
+} else {
+  //if something went wrong
+  echo "Error ". mysqli_error($conn);
+}
+
+
+  
+
 }
 
 
@@ -104,7 +115,7 @@ $sql = "INSERT INTO soups(title,email, ingredients) VALUES('$title','$email','$i
 <!DOCTYPE html>
 <html lang="en">
 
-<?php  include "./templates/header.php";   ?>
+<?php  include "templates/header.php";   ?>
 
 <section class = "container grey-text">
   <h4 class = "center">Add a Soup</h4>
@@ -132,7 +143,7 @@ $sql = "INSERT INTO soups(title,email, ingredients) VALUES('$title','$email','$i
 
 
 
-<?php  include "./templates/footer.php";   ?>
+<?php  include "templates/footer.php";   ?>
 
 
   </html>
