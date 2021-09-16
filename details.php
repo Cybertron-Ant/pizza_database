@@ -1,6 +1,36 @@
 <?php 
 include('configurations/database_connection.php');
 
+if (isset($_POST['delete'])) {
+  
+  //reference hidden input form field 
+  $id_to_delete = mysqli_real_escape_string($conn, $_POST['id_to_delete']);
+  
+  $sql = "DELETE FROM soups WHERE id = $id_to_delete";
+  
+  if (mysqli_query($conn, $sql)) {
+    //if query is successful
+    //redirect user to home page
+  
+    //header('Location: index php');
+    
+    //Or redirect user using some JavaScript
+      echo "<script>
+           //Using setTimeout to execute a function after 1 second.
+           setTimeout(function () {
+              //Redirect with JavaScript
+              window.location.assign('index.php');
+           }, 1000);
+           </script>";  
+    
+    
+  } else {
+    //if query failed
+    echo "Error ". mysqli_query($conn);
+  }
+  
+}
+
 // check GET request id parameter
 if(isset($_GET['id'])) {
   
