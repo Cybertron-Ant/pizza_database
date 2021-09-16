@@ -40,6 +40,7 @@ mysqli_close($conn);
       On medium screens, that up 3 columns of width out of 12. -->
       <div class= "col s6 md3">
         <div class = "card z-depth-0">
+          <img src = "images/fresh_soup.jpeg" class = "style_soup" >
           <div class = "card-content center">
             <h6><?php echo htmlspecialchars($dish['title']); ?></h6>
             <ul>
