@@ -46,7 +46,7 @@ mysqli_close($conn);
 <div class = "container">
   <div class= "row">
 
-    <?php foreach ($dishes as $dish) { ?>
+    <?php foreach ($dishes as $dish):  ?>
       <!-- on small screens, take up 6 columns of width out of 12.
       On medium screens, that up 3 columns of width out of 12. -->
       <div class= "col s6 md3">
@@ -54,10 +54,10 @@ mysqli_close($conn);
           <div class = "card-content center">
             <h6><?php echo htmlspecialchars($dish['title']); ?></h6>
             <ul>
-              <?php foreach (explode(',', $dish['ingredients']) as $myIngredient) { ?>
+              <?php foreach (explode(',', $dish['ingredients']) as $myIngredient): ?>
                 <!-- Output each ingredient in a list -->
                 <li><?php echo htmlspecialchars($myIngredient); ?></li>
-              <?php } ?>
+              <?php endforeach; ?>
               
             </ul>
           </div>
@@ -67,7 +67,7 @@ mysqli_close($conn);
         </div>
       </div>
 
-    <?php } ?>
+    <?php endforeach; ?>
 
   </div>
 </div>
