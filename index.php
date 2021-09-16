@@ -32,14 +32,14 @@ mysqli_close($conn);
 
 <h4 class= "center grey-text">Soups</h4>
 
-<div class = "container">
+<div class = "center">
   <div class= "row">
 
     <?php foreach ($dishes as $dish):  ?>
       <!-- on small screens, take up 6 columns of width out of 12.
       On medium screens, that up 3 columns of width out of 12. -->
-      <div class= "col s6 md3">
-        <div class = "card z-depth-0">
+      <div class= "container">
+        <div class = "card center z-depth-80">
           <img src = "images/fresh_soup.jpeg" class = "style_soup" >
           <div class = "card-content center">
             <h6><?php echo htmlspecialchars($dish['title']); ?></h6>
