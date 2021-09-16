@@ -1,4 +1,7 @@
 <?php
+include(configurations/database_connection.php);
+
+
 
 /*
 // used this initially to check if form was working
