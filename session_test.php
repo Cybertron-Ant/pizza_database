@@ -1,11 +1,13 @@
 <?php
 
+//hard coding my session variable before submit button is pressed/clicked
+$_SESSION['username'] = "Guest";
+
+
 if(isset($_POST['submit'])) {
 
 session_start();
 
-//hard coding my session variable
-$_SESSION['username'] = "Guest";
 
 $_SESSION['username'] = $_POST['username'];
 

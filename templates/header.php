@@ -1,7 +1,8 @@
  <?php
  
  session_start();
- 
+ $_SESSION['username'] = "Guest";
+
  $username = $_SESSION['username'];
  
  
@@ -24,7 +25,7 @@
        <div class = "container">
          <a href = "index.php" class = "brand-logo brand-text">Antonio's Soup Depo</a>
          <ul id = "nav-mobile" class = "right ">
-        <li class = "paint">Hello <?php echo htmlspecialchars($username); ?> </li>
+        <li class = "">Hello <?php echo htmlspecialchars($username); ?> </li>
            <li><a href = "add.php" class = "btn brand z-depth-0">Add Soup</a></li>
          </ul>
        </div>
