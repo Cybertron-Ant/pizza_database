@@ -39,9 +39,14 @@ if(isset($_GET['id'])) {
     <h4><?php echo htmlspecialchars($mySoup['title']); ?></h4>
     <p>Created by: <?php echo htmlspecialchars($mySoup['email']); ?></p>
     <p>Created by: <?php echo date($mySoup['created_at']); ?></p>
+    <h5>Ingredients</h5>
+     <p><?php echo htmlspecialchars($mySoup['ingredients']); ?></p>
+
 
 
    <?php else: ?>
+   
+   <h5>No such soup exists!</h5>
    
    <?php endif; ?>
 
