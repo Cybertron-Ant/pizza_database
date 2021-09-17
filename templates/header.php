@@ -9,7 +9,8 @@
  ?>
  
  <head>
-     <title>My page</title>
+     <title>Best Soup: Make your own soup</title>
+     <meta name="description" content="Come and improve your soup making skills by adding your favorite ingredients.">
       <link rel = "stylesheet" href = "./node_modules/bootstrap.min.css">
 <link rel = "stylesheet" href = "./node_modules/materialize.min.css">
 
