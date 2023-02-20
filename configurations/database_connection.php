@@ -18,9 +18,9 @@ if (mysqli_connect_errno()) {
 
  
  <?php 
- $DATABASE_HOST = 'containers-us-west-103.railway.app';
+ $DATABASE_HOST = 'containers-us-west-33.railway.app';
  $DATABASE_USER = 'root';
- $DATABASE_PASS = 'iTYieatWFXEDMGeDshmE';
+ $DATABASE_PASS = 'pv09RfU0g9RaUdrKhCIs';
  $DATABASE_NAME = 'railway';
  
  //connect to database
