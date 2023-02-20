@@ -18,10 +18,10 @@ if (mysqli_connect_errno()) {
 
  
  <?php 
- $DATABASE_HOST = 'sql311.unaux.com';
- $DATABASE_USER = 'unaux_29764247';
- $DATABASE_PASS = 'Conglomeration1';
- $DATABASE_NAME = 'unaux_29764247_soup_database';
+ $DATABASE_HOST = 'containers-us-west-103.railway.app';
+ $DATABASE_USER = 'root';
+ $DATABASE_PASS = 'iTYieatWFXEDMGeDshmE';
+ $DATABASE_NAME = 'railway';
  
  //connect to database
  $conn = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
