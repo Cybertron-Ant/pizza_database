@@ -17,11 +17,11 @@ if (mysqli_connect_errno()) {
  
 
  
- <?php /* 
- $DATABASE_HOST = 'sql311.unaux.com';
- $DATABASE_USER = 'unaux_29764247';
+ <?php  
+ $DATABASE_HOST = 'sql211.unaux.com';
+ $DATABASE_USER = 'unaux_34511784';
  $DATABASE_PASS = 'Conglomeration1';
- $DATABASE_NAME = 'unaux_29764247_soup_database';
+ $DATABASE_NAME = 'unaux_34511784_soup_database';
  
  //connect to database
  $conn = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
@@ -29,11 +29,11 @@ if (mysqli_connect_errno()) {
  //check database connection if it's true or false
  if (mysqli_connect_errno()) {
  	exit('Failed to connect to database: ' . mysqli_connect_error());
- } */
+ } 
   ?>
 
 
-<?php 
+<?php /*
  $DATABASE_HOST = $_ENV["DATABASE_HOST"];
  $DATABASE_USER = $_ENV["DATABASE_USER"];
  $DATABASE_PASS = $_ENV["DATABASE_PASS"];
@@ -46,5 +46,5 @@ if (mysqli_connect_errno()) {
  //check database connection if it's true or false
  if (mysqli_connect_errno()) {
  	exit('Failed to connect to database: ' . mysqli_connect_error());
- }
+ } */
   ?>
